@@ -209,7 +209,7 @@ func main() {
 	fmt.Println("First 5:", numList[:5])
 
 	//? dynamically sized arrays using make (allocates a zeroed array and returns a slice that refers to that array)
-	dynArray := make([]int, 5) // makes an array of zeros with a length of 5
+	dynArray := make([]int, 5) // makes an array of zeros with a length 5
 	fmt.Println(dynArray)
 
 }
