@@ -212,4 +212,18 @@ func main() {
 	dynArray := make([]int, 5) // makes an array of zeros with a length 5
 	fmt.Println(dynArray)
 
+	//? appending to a slice
+	newList := append(numList[:4], 99)
+	fmt.Println(newList)
+
+	//? range - When ranging over a slice, two values are returned for each iteration. The first is the index, and
+	//? the second is a copy of the element at that index. omit second value for just the index
+	for index, value := range newList {
+		fmt.Printf("Index: %d, Value: %d\n", index, value)
+	}
+	fmt.Println()
+
+	//! maps
+	fmt.Println("-- Maps --")
+
 }
