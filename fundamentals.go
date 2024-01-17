@@ -225,5 +225,32 @@ func main() {
 
 	//! maps
 	fmt.Println("-- Maps --")
+	// data structure used to store a key value pair
+	//? initialize maps with 'make'
+	m := make(map[string]int)
+	fmt.Println("Using make: ", m)
+	//? OR initialize with map literal
+	m_lit := map[string]int{"key1": 1, "key2": 2}
+	fmt.Println("Using map literal:", m_lit)
+
+	//? access elements of map
+	value_m := m_lit["key1"]
+	fmt.Println(value_m)
+
+	//? insert or update element
+	m["first entry"] = 1
+	fmt.Println(m)
+
+	//? deleting an element
+	delete(m_lit, "key2")
+	fmt.Println(m_lit)
+
+	//? test that key is present w/ 2-value assignment
+	// If key is in m, ok is true. If not, ok is false.
+	// If key is not in the map, then elem is the zero value for the map's element type.
+	elem, ok := m["first entry"]
+	fmt.Printf("Element %d present?: %t\n", elem, ok)
+	elem2, ok2 := m["second entry"]
+	fmt.Printf("Element %d present?: %t\n", elem2, ok2)
 
 }
