@@ -246,7 +246,7 @@ func main() {
 	fmt.Println(m_lit)
 
 	//? test that key is present w/ 2-value assignment
-	// If key is in m, ok is true. If not, ok is false.
+	// If key is in m, ok = true. If not, ok is false.
 	// If key is not in the map, then elem is the zero value for the map's element type.
 	elem, ok := m["first entry"]
 	fmt.Printf("Element %d present?: %t\n", elem, ok)
