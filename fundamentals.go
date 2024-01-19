@@ -71,7 +71,7 @@ func main() {
 	//! basic variable types
 	fmt.Println("-- Basic Variables --")
 	//? Boolean Type
-	var isBool bool // A boolean type represents the set of Boolean truth values denoted by the predeclared constants true and false.
+	var isBool bool // A boolean type represents the set of Boolean truth values denoted by the pre-declared constants true and false.
 
 	//? Integer Types
 	var numInt int       // An int is a signed integer of platform-dependent size.
