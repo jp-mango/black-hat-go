@@ -12,7 +12,7 @@ This repository is organized chapter-wise, mirroring the structure of the book. 
 
 ```shell
 /
-│   fundamentals.go
+├── fundamentals.go
 ├── Chapter01/
 ├── Chapter02/
 ├── Chapter03/
