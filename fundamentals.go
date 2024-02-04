@@ -17,6 +17,16 @@ func swap(x, y string) (string, string) {
 	return y, x
 }
 
+// Adder function returns a closure—a function that encapsulates its own environment.
+// The closure captures and stores the sum variable from its outer function adder.
+func adder() func(int) int {
+	sum := 0
+	return func(x int) int {
+		sum += x
+		return sum
+	}
+}
+
 func main() {
 	//! using libraries
 	fmt.Println("\n-- Libraries --")
@@ -231,12 +241,12 @@ func main() {
 	m := make(map[string]int)
 	fmt.Println("Using make: ", m)
 	//? OR initialize with map literal
-	m_lit := map[string]int{"key1": 1, "key2": 2}
+	m_lit := map[string]int{"key1": 100, "key2": 200, "key3": 300}
 	fmt.Println("Using map literal:", m_lit)
 
 	//? access elements of map
 	value_m := m_lit["key1"]
-	fmt.Println(value_m)
+	fmt.Println("m_lit key1 =", value_m)
 
 	//? insert or update element
 	m["first entry"] = 1
@@ -254,4 +264,20 @@ func main() {
 	elem2, exists2 := m["second entry"]
 	fmt.Printf("Element %d present?: %t\n", elem2, exists2)
 
+	//? iterating through a map
+	for key, value := range m_lit {
+		fmt.Println("Key:", key, "Value:", value)
+	}
+	fmt.Println()
+
+	//! Functions
+	fmt.Println("-- Functions --")
+	// closure call. See adder(), line 22, function for example
+	pos, neg := adder(), adder()
+	for i := 0; i < 10; i++ {
+		fmt.Println(
+			pos(i),
+			neg(-2*i),
+		)
+	}
 }
