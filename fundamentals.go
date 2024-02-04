@@ -227,6 +227,7 @@ func main() {
 	fmt.Println("-- Maps --")
 	// data structure used to store a key value pair
 	//? initialize maps with 'make'
+	// make(map[key]value)
 	m := make(map[string]int)
 	fmt.Println("Using make: ", m)
 	//? OR initialize with map literal
