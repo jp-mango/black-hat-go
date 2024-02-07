@@ -27,7 +27,7 @@ func adder() func(int) int {
 	}
 }
 
-func main() {
+func fundamentals() {
 	//! using libraries
 	fmt.Println("\n-- Libraries --")
 	// using fmt
@@ -277,7 +277,7 @@ func main() {
 	for i := 0; i < 10; i++ {
 		fmt.Println(
 			pos(i),
-			neg(-2*i),
+			neg(-2 * i),
 		)
 	}
 }
