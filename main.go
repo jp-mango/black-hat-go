@@ -5,5 +5,5 @@ import (
 )
 
 func main(){
-	tcpscannersproxies.TCPscanner()
+	tcpscannersproxies.FastTCPscanner()
 }
