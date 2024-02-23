@@ -1,3 +1,9 @@
+/*
+=====================================================
+Author: Justin Menzies
+Useful links: https://go.dev/tour
+=====================================================
+*/
 package main
 
 import (
@@ -176,10 +182,8 @@ func main() {
 	fmt.Println("-- Pointers --")
 	// Declare an integer variable
 	originalValue := 100
-	// Declare a pointer to an integer
-	var pointerToValue *int
 	// Assign the address of originalValue to pointerToValue
-	pointerToValue = &originalValue
+	pointerToValue := &originalValue
 	// Print the original value, the address of the original value, and the pointer value
 	fmt.Println("Original Value:", originalValue)
 	fmt.Println("Address of Original Value:", &originalValue)
